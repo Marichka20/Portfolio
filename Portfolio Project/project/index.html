@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria's Portfolio</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">Portfolio</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+<section class="home" id="home">
+  <div class="home-content">
+    <h3>Hello, my name is </h3>
+    <h1>Maria Besiada</h1>
+    <h3>I'm a <span class="multiple-text">Full Stack Web Developer</span></h3>
+  <p>I am passionate about creating websites and web applications. Eager to further my Web Development journey by joining a dynamic team, learning from experienced professionals, and actively participating in the development of cutting-edge digital solutions. </p>
+  <div class="social-media">
+<a href="https://github.com/maryqa0087" target="_blank"><i class='bx bxl-github'></i></a>  
+<a href="https://www.facebook.com/maria.besiada/" target="_blank"><i class='bx bxl-facebook'></i></a>
+<a href="https://www.linkedin.com/in/maria-besiada-b6394274/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+<a href="https://www.instagram.com/mariabesiada/" target="_blank"><i class='bx bxl-instagram'></i></a>
+</div>
+<a href="images/Resume - Maria.pdf" class="btn">Dowload CV</a>
+</div>
+  <div class="home-img">
+    <img src="images/me_preview.png">
+</div>
+</section>
+
+<section class="services" id="services">
+  <h2 class="heading">My <span>Services</span></h2>
+
+  <div class="services-container">
+  <div class="services-box">
+  <i class='bx bx-code-alt' ></i>
+  <h3>Front-end Web Development</h3>
+  <p>I can transform your vision into stunning, user-friendly websites.
+  </p>
+<a href="#" class="btn"  onclick="toggleMoreFrontEndInfo(event)">Read More</a>
+<p class ='more-info-frontend' style="display: none;">
+  I am proficient in HTML, CSS, JavaScript and React.
+</p>
+</div>
+
+<div class="services-box">
+  <i class='bx bxl-postgresql' ></i>
+  <h3>Back-end Web Development</h3>
+  <p>I can power your website with seamless functionality and robust performance.</p>
+<a href="#" class="btn"onclick="toggleMoreBackendEndInfo(event)">Read More</a>
+<p class ='more-info-backend' style="display: none;">
+  I have good understanding of Java, PostgreSQL and PHP.
+</p>
+</div>
+</div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <h2 class="heading">Latest <span>Project</span></h2>
+<div class="portfolio-container">
+  <div class="portfolio-box">
+    <img src="images/project1-resized.png" alt="Squid Game picture">
+  <div class="portfolio-layer">
+    <h4>Squid Game</h4>
+    <p>A game written in HTML, CSS and JavaScript.</p>
+  <a href="https://64a36e0857067b797593f278--venerable-dusk-fb99e7.netlify.app/" target="_blank"><i class='bx bx-link-external'></i></a>
+  </div>
+  </div>
+
+  <div class="portfolio-box">
+    <img src="images/project2-resized.jpg" alt="Random password generator picture">
+  <div class="portfolio-layer">
+    <h4>Password Generator</h4>
+    <p>A password Generator written in HTML, CSS and JavaScript.</p>
+  <a href="https://cool-lolly-d77d4e.netlify.app/" target="_blank"><i class='bx bx-link-external'></i></a>
+  </div>
+  </div>
+
+  <div class="portfolio-box">
+    <img src="images/project 3-resized.png" alt="Study counting app">
+  <div class="portfolio-layer">
+    <h4>Study Counting App</h4>
+    <p>A web app written in HTML, CSS and JavaScript.</p>
+    <a href="https://649cddd340f6321765ea74b7--taupe-druid-30ed35.netlify.app/?fbclid=IwAR1uiWLf-HBHXrWs3LMoU0SqHZ54l-MYxuoUHU4kVhDopk-ym-idFGoPFyc" target="_blank"><i class='bx bx-link-external'></i></a>
+  </div>
+  </div>
+
+  <div class="portfolio-box">
+    <img src="images/project 4.png" alt="">
+  <div class="portfolio-layer">
+    <h4>Meme generator App</h4>
+    <p>A meme generator written in React.</p>
+  <a href="https://gregarious-mermaid-b678e9.netlify.app/" target="_blank"><i class='bx bx-link-external'></i></a>
+  </div>
+  </div>
+
+</div>
+</section>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="heading">Contact <span>Me!</span></h2>
+  <form id="validationForm" action ="#">
+    <div class="input-box">
+      <input type ="text" id="full-name" placeholder="Full Name">
+      <input type ="email" id="email" placeholder="Email Address">
+    </div>
+
+    <div class="input-box">
+      <input type ="number" id="phone" placeholder="Phone">
+      <input type ="text" placeholder="Email Subject">
+    </div>
+<textarea name="" id="textarea" cols="30" rows="10" placeholder="Your Message"></textarea>
+<input type ="submit" value="Send Message" class="btn">  
+</form>
+</section>
+
+<!-- Success Message Box -->
+<div class="message-box" id="success-message">
+  <div class="message-content">
+    <span class="message-text">Thank you! Your request has been sent to maribesiada@gmail.com</span>
+    <button class="close-button" id="close-message">Close</button>
+  </div>
+</div>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
